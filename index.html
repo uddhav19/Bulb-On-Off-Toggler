@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toggle</title>
+    <style>
+        body{
+            background-color: #476254;
+            background-image: linear-gradient(45deg, #3a51b5 0%, #4baa66 100%);
+            min-height: 100vh;
+
+        }
+        .car-container{
+           background-color: white; 
+           width: 300px;
+           margin:50px auto;
+           display: flex;
+           justify-content: center;
+           padding: 40px;
+           border-radius: 10px;
+           box-shadow: 0 0 10px black;
+        }
+        .app-title{
+            text-align: center;
+        }
+        .car-img{
+            height: 100px;
+        }
+        .btn-container{
+            display:flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .btn-toggle{
+            font-size: 20px;
+            padding: 5px 20px;
+            border-radius: 40px;
+            border: none;
+            margin: 0 10px;
+            cursor: pointer;
+            background-color: black;
+            color: white;
+        }
+       
+    </style>
+</head>
+<body>
+    <h1 class="app-title">Cars Toggle</h1>
+   <div class="car-container">
+    <img src="./img/minivan-e1611599600455.jpg" class="car-img" id="car">
+
+   </div>
+   <div class="btn-container">
+    <button class="btn-toggle" onclick="togglecar('minivan')">minivan</button>
+    <button class="btn-toggle" onclick="togglecar('pickup')">pickup</button>
+    <button class="btn-toggle" onclick="togglecar('supercar')">supercar</button>
+    <button class="btn-toggle" onclick="togglecar('van-truck')">van-truck</button>
+
+   </div>
+   <script>
+    function togglecar(state){
+       const carElement = document.getElementById("car");
+       if(state == 'minivan'){
+             carElement.src = './img/minivan-e1611599600455.jpg';
+       }
+       else if(state =='pickup'){
+             carElement.src = './img/pickup-truck-e1611598692870.jpg';
+       }
+       else if(state == 'supercar'){
+             carElement.src ='./img/supercar-e1611599041412.jpg';
+       }
+       else if(state == 'van-truck'){
+             carElement.src = './img/van-truck-e1611598780611.jpg';
+       }
+    }
+   </script>
+</body>
+</html>
